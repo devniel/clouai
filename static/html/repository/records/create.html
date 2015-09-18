@@ -1,0 +1,16 @@
+<div class='row' ng-controller='RecordsFormController as form'>
+	<div class='col-md-8'>
+		<h3 class='cl-title'>New record</h3>
+		<form>
+			<div class="form-group" ng-repeat="property in form.properties">
+				<label class="cl-label" for="exampleInputEmail1">{{property.name}} <a href='#' class="pull-right" ng-click="form.addProperty(property.id)">add</a> </label>
+				<input type="text" ng-model='property.value' class="form-control" placeholder="Enter {{property.name}}">
+			</div>
+			<button type="submit" class="btn btn-default cl-btn-add" ng-click='form.submit()'>Submit</button>
+		</form>
+	</div>
+
+	<div class='col-md-4'>
+		<div class="cl-sidebar"></div>
+	</div>
+</div>

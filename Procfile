@@ -1,0 +1,1 @@
+web: gunicorn wsgi:application --workers 3 --settings=settings.production

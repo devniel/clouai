@@ -1,0 +1,30 @@
+<div class='row' ng-controller='RecordsController'>
+	<div class='col-sm-8'>
+
+		<h3 class='cl-title'>Records</h3>
+
+		<div ng-repeat='record in records'>
+			<record record='record'/>
+		</div>
+
+		<div ng-show="no_records" class="cl-message">There are no records</div>
+
+	</div>
+
+	<div class='col-sm-4'>
+		<div class="cl-sidebar">
+			<a class="btn btn-default cl-btn-add" href="/repository/records/create">Add</a>
+
+			<h3 class="repository-info">
+				<span class="repository-info-value">{{records.length}}</span>
+				<span class="repository-info-type">records</span>
+			</h3>
+
+			<h3 class="repository-info">
+				<span class="repository-info-value"><a class='cl-link' href='http://www.clouai.org/{{repository.name}}/oai/' target="_self">OAI</a></span>
+				<span class="repository-info-type">interface</span>
+			</h3>
+
+		</div>
+	</div>
+</div>

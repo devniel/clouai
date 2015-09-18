@@ -1,0 +1,95 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" ng-app="clouai">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <base href="/" />
+
+    <title>clouai</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper text-center">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix" ng-controller='NavbarController as vm'>
+            <div class="inner">
+              <h3 class="masthead-brand"><a href='/'>clouai</a></h3>
+              <h6 class="masthead-brand cl-version">alpha</h6>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li ng-class="(active==null || active=='/') ? 'active' : ''"><a href="/">Home</a></li>
+                  <li ng-class="(active==null || active=='/login') ? 'active' : ''"><a href="/login">Login</a></li>
+                  <li ng-class="(active==null || active=='/register') ? 'active' : ''"><a href="/register">Register</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="site-content ng-view"></div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>by <a href="https://twitter.com/devniel">@devniel</a> <br/>cover theme made by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+    <script src="{% static 'libs/angular/angular.min.js' %}"></script>
+    <script src="{% static 'libs/angular-cookies/angular-cookies.min.js' %}"></script>
+    <script src="{% static 'libs/angular-route/angular-route.min.js' %}"></script>
+    <script src="{% static 'libs/angular-sanitize/angular-sanitize.js' %}"></script>
+
+    <script src="{% static 'js/app/authentication/authentication.module.js' %}"></script>
+    <script src="{% static 'js/app/layout/layout.module.js' %}"></script>
+
+    <script src="{% static 'js/app/authentication/services/authentication.service.js' %}"></script>
+
+    <script src="{% static 'js/app/authentication/controllers/register.controller.js' %}"></script>
+    <script src="{% static 'js/app/authentication/controllers/login.controller.js' %}"></script>
+    <script src="{% static 'js/app/authentication/controllers/logout.controller.js' %}"></script>
+
+    <script src="{% static 'js/app/layout/controllers/navbar.controller.js' %}"></script>
+    <script src="{% static 'js/app/layout/controllers/landing.controller.js' %}"></script>
+
+    <script src="{% static 'js/app/clouai.public.js' %}"></script>
+    <script src="{% static 'js/app/clouai.config.js' %}"></script>
+    <script src="{% static 'js/app/clouai.landing.routes.js' %}"></script>
+
+  </body>
+</html>

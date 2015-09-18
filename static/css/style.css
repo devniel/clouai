@@ -1,0 +1,191 @@
+* {
+  font-weight: 900 !important;
+  font-family: "Roboto"
+}
+
+.navbar {
+	border-radius: 0px;
+}
+
+/*
+ * Layout
+ */
+
+@media (min-width: 768px) {
+
+  /* Pull out the header and footer */
+  .cl-header {
+  	margin: 0 auto;
+  }
+
+  .cl-footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+  /* Handle the widths */
+  .cl-header,
+  .cl-footer,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cl-header,
+  .cl-footer,
+  .cl-body {
+    width: 900px;
+  }
+}
+
+
+/*
+ * Body
+ */
+
+.cl-body {
+	margin-top: 20px;
+	min-height: 750px;
+}
+
+
+/*
+ * Header
+ */
+
+.cl-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cl-version {
+  color: #CCC !important;
+  font-weight: 400;
+}
+
+.cl-nav > li {
+  display: inline-block;
+}
+.cl-nav > li + li {
+  margin-left: 20px;
+}
+.cl-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* IE8 proofing */
+  border-bottom: 2px solid transparent;
+}
+.cl-nav > li > a:hover,
+.cl-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #999;
+}
+.cl-nav > .active > a,
+.cl-nav > .active > a:hover,
+.cl-nav > .active > a:focus {
+  color: #333;
+  border-bottom-color: #999;
+}
+
+@media (min-width: 768px) {
+  .cl-brand {
+    float: left;
+  }
+  .cl-nav {
+    float: right;
+  }
+}
+
+/**
+ * Record
+ */
+
+.cl-title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 10px;
+}
+
+.record {
+	border-left: 5px solid rgba(204, 204, 204, 0.4);
+	padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.record:hover {
+	border-left: 5px solid rgba(204, 204, 204, 0.8);
+	color: #000;
+	cursor: pointer;
+}
+
+.record .title {
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+}
+
+.record .identifier {
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+  color: #909090;
+}
+
+/**
+* CF SIDEBAR
+*/
+
+.cl-sidebar {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.cl-message {
+  font-size: 17px;
+}
+
+.cl-btn-add {
+  padding: 5px 20px;
+  position: relative;
+  color: rgba(215, 40, 40, 1);
+  background-color: none !important;
+  border-color: rgba(215, 40, 40, 1);
+  border-width: 1px;
+}
+
+.cl-btn-add:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('/static/img/add.png') center;
+  background-size: 40px 40px;
+  left: -25px;
+  top: -6px;
+}
+
+.repository-info {
+
+}
+
+.repository-info-value {
+  display: block;
+  font-size:50px;
+}
+
+.repository-info-type {
+  display: block;
+  font-size: 20px;
+}
+
+.cl-label {
+  display: block;
+}
